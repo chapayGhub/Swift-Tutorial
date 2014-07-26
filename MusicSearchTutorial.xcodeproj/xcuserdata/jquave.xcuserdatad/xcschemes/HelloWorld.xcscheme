@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "024F8AB2198464AA00E9DEB8"
-               BuildableName = "HelloWorld.app"
-               BlueprintName = "HelloWorld"
-               ReferencedContainer = "container:HelloWorld.xcodeproj">
+               BuildableName = "MusicSearchTutorial.app"
+               BlueprintName = "MusicSearchTutorial"
+               ReferencedContainer = "container:MusicSearchTutorial.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "024F8AC4198464AA00E9DEB8"
-               BuildableName = "HelloWorldTests.xctest"
-               BlueprintName = "HelloWorldTests"
-               ReferencedContainer = "container:HelloWorld.xcodeproj">
+               BuildableName = "MusicSearchTutorialTests.xctest"
+               BlueprintName = "MusicSearchTutorialTests"
+               ReferencedContainer = "container:MusicSearchTutorial.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "024F8AB2198464AA00E9DEB8"
-            BuildableName = "HelloWorld.app"
-            BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:HelloWorld.xcodeproj">
+            BuildableName = "MusicSearchTutorial.app"
+            BlueprintName = "MusicSearchTutorial"
+            ReferencedContainer = "container:MusicSearchTutorial.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "024F8AB2198464AA00E9DEB8"
-            BuildableName = "HelloWorld.app"
-            BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:HelloWorld.xcodeproj">
+            BuildableName = "MusicSearchTutorial.app"
+            BlueprintName = "MusicSearchTutorial"
+            ReferencedContainer = "container:MusicSearchTutorial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "024F8AB2198464AA00E9DEB8"
-            BuildableName = "HelloWorld.app"
-            BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:HelloWorld.xcodeproj">
+            BuildableName = "MusicSearchTutorial.app"
+            BlueprintName = "MusicSearchTutorial"
+            ReferencedContainer = "container:MusicSearchTutorial.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
