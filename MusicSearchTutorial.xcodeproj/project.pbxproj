@@ -13,6 +13,7 @@
 		024F8AC0198464AA00E9DEB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024F8ABF198464AA00E9DEB8 /* Images.xcassets */; };
 		024F8ACC198464AA00E9DEB8 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ACB198464AA00E9DEB8 /* HelloWorldTests.swift */; };
 		024F8AD619846FC100E9DEB8 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8AD519846FC100E9DEB8 /* APIController.swift */; };
+		024F8AD8198482D000E9DEB8 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = 024F8AD7198482D000E9DEB8 /* Blank52.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		024F8ACA198464AA00E9DEB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F8ACB198464AA00E9DEB8 /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
 		024F8AD519846FC100E9DEB8 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		024F8AD7198482D000E9DEB8 /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		024F8AB5198464AA00E9DEB8 /* MusicSearchTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				024F8AD7198482D000E9DEB8 /* Blank52.png */,
 				024F8AB8198464AA00E9DEB8 /* AppDelegate.swift */,
 				024F8ABA198464AA00E9DEB8 /* SearchResultsViewController.swift */,
 				024F8ABC198464AA00E9DEB8 /* Main.storyboard */,
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024F8AD8198482D000E9DEB8 /* Blank52.png in Resources */,
 				024F8ABE198464AA00E9DEB8 /* Main.storyboard in Resources */,
 				024F8AC0198464AA00E9DEB8 /* Images.xcassets in Resources */,
 			);
