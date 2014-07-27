@@ -16,6 +16,8 @@
 		024F8AD8198482D000E9DEB8 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = 024F8AD7198482D000E9DEB8 /* Blank52.png */; };
 		024F8ADA19848E1E00E9DEB8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8AD919848E1E00E9DEB8 /* Album.swift */; };
 		024F8ADC1984946C00E9DEB8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ADB1984946C00E9DEB8 /* DetailsViewController.swift */; };
+		024F8ADE19852C0200E9DEB8 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ADD19852C0200E9DEB8 /* Track.swift */; };
+		024F8AE0198532B800E9DEB8 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ADF198532B800E9DEB8 /* TrackCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		024F8AD7198482D000E9DEB8 /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 		024F8AD919848E1E00E9DEB8 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		024F8ADB1984946C00E9DEB8 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		024F8ADD19852C0200E9DEB8 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		024F8ADF198532B800E9DEB8 /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 				024F8AD519846FC100E9DEB8 /* APIController.swift */,
 				024F8AD919848E1E00E9DEB8 /* Album.swift */,
 				024F8ADB1984946C00E9DEB8 /* DetailsViewController.swift */,
+				024F8ADD19852C0200E9DEB8 /* Track.swift */,
+				024F8ADF198532B800E9DEB8 /* TrackCell.swift */,
 			);
 			name = MusicSearchTutorial;
 			path = HelloWorld;
@@ -223,11 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024F8AE0198532B800E9DEB8 /* TrackCell.swift in Sources */,
 				024F8ABB198464AA00E9DEB8 /* SearchResultsViewController.swift in Sources */,
 				024F8AB9198464AA00E9DEB8 /* AppDelegate.swift in Sources */,
 				024F8AD619846FC100E9DEB8 /* APIController.swift in Sources */,
 				024F8ADA19848E1E00E9DEB8 /* Album.swift in Sources */,
 				024F8ADC1984946C00E9DEB8 /* DetailsViewController.swift in Sources */,
+				024F8ADE19852C0200E9DEB8 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +421,7 @@
 				024F8AD1198464AA00E9DEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		024F8AD2198464AA00E9DEB8 /* Build configuration list for PBXNativeTarget "MusicSearchTutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				024F8AD4198464AA00E9DEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
