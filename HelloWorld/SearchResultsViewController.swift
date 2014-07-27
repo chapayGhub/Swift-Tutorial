@@ -12,7 +12,8 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet var appsTableView : UITableView?
     let kCellIdentifier: String = "SearchResultCell"
-    var tableData = []
+    var albums = [Album]()
+    
     lazy var api : APIController = APIController(delegate: self)
     
     var imageCache = [String : UIImage]()
@@ -20,7 +21,8 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        api.searchItunesFor("Angry Birds")
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        api.searchItunesFor("Bob Dylan");
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,37 +35,34 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     func didReceiveAPIResults(results: NSDictionary) {
         var resultsArr: NSArray = results["results"] as NSArray
         dispatch_async(dispatch_get_main_queue(), {
-            self.tableData = resultsArr
+            self.albums = Album.albumsWithJSON(resultsArr)
             self.appsTableView!.reloadData()
-            })
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
     }
 
     
     // The protocol methods for UITableViewDataSource and UITableViewDelegate
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return albums.count
     }
 
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
         
-        var rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
-        
-        // Add a check to make sure this exists
-        let cellText: String? = rowData["trackName"] as? String
-        cell.textLabel.text = cellText
+        let album = self.albums[indexPath.row]
+        cell.textLabel.text = album.title
         cell.imageView.image = UIImage(named: "Blank52")
         
-        
         // Get the formatted price string for display in the subtitle
-        let formattedPrice: NSString = rowData["formattedPrice"] as NSString
+        let formattedPrice = album.price
         
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             // Jump in to a background thread to get the image for this item
             
             // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
-            let urlString: NSString = rowData["artworkUrl60"] as NSString
+            let urlString = album.thumbnailImageURL
             
             // Check our image cache for the existing key. This is just a dictionary of UIImages
             //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
@@ -100,18 +99,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
-    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        // Get the row data for the selected row
-        var rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
-        
-        var name: String = rowData["trackName"] as String
-        var formattedPrice: String = rowData["formattedPrice"] as String
-        
-        var alert: UIAlertView = UIAlertView()
-        alert.title = name
-        alert.message = formattedPrice
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
+        var detailsViewController: DetailsViewController = segue.destinationViewController as DetailsViewController
+        var albumIndex = appsTableView!.indexPathForSelectedRow().row
+        var selectedAlbum = self.albums[albumIndex]
+        detailsViewController.album = selectedAlbum
     }
 
 }

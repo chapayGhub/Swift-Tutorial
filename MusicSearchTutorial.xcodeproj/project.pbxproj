@@ -14,6 +14,8 @@
 		024F8ACC198464AA00E9DEB8 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ACB198464AA00E9DEB8 /* HelloWorldTests.swift */; };
 		024F8AD619846FC100E9DEB8 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8AD519846FC100E9DEB8 /* APIController.swift */; };
 		024F8AD8198482D000E9DEB8 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = 024F8AD7198482D000E9DEB8 /* Blank52.png */; };
+		024F8ADA19848E1E00E9DEB8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8AD919848E1E00E9DEB8 /* Album.swift */; };
+		024F8ADC1984946C00E9DEB8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ADB1984946C00E9DEB8 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		024F8ACB198464AA00E9DEB8 /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
 		024F8AD519846FC100E9DEB8 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		024F8AD7198482D000E9DEB8 /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
+		024F8AD919848E1E00E9DEB8 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		024F8ADB1984946C00E9DEB8 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				024F8ABF198464AA00E9DEB8 /* Images.xcassets */,
 				024F8AB6198464AA00E9DEB8 /* Supporting Files */,
 				024F8AD519846FC100E9DEB8 /* APIController.swift */,
+				024F8AD919848E1E00E9DEB8 /* Album.swift */,
+				024F8ADB1984946C00E9DEB8 /* DetailsViewController.swift */,
 			);
 			name = MusicSearchTutorial;
 			path = HelloWorld;
@@ -220,6 +226,8 @@
 				024F8ABB198464AA00E9DEB8 /* SearchResultsViewController.swift in Sources */,
 				024F8AB9198464AA00E9DEB8 /* AppDelegate.swift in Sources */,
 				024F8AD619846FC100E9DEB8 /* APIController.swift in Sources */,
+				024F8ADA19848E1E00E9DEB8 /* Album.swift in Sources */,
+				024F8ADC1984946C00E9DEB8 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
