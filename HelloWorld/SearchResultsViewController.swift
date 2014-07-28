@@ -64,11 +64,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             // Jump in to a background thread to get the image for this item
             
             // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
-            let urlString: NSString = rowData["artworkUrl60"] as NSString
+            let urlString = rowData["artworkUrl60"] as String
             
             // Check our image cache for the existing key. This is just a dictionary of UIImages
             //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
             var image = self.imageCache[urlString]
+
             
             if( !image? ) {
                 // If the image does not exist, we need to download it
@@ -82,7 +83,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
                         image = UIImage(data: data)
                         
                         // Store the image in to our cache
-                        self.imageCache["urlString"] = image
+                        self.imageCache[urlString] = image
                         cell.imageView.image = image
                     }
                     else {
@@ -92,7 +93,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
                 
             }
             else {
-                cell.imageView.image = image
+                dispatch_async(dispatch_get_main_queue(), {
+                    cell.imageView.image = image
+                })
             }
         })
         
