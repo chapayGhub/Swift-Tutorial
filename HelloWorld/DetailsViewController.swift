@@ -52,6 +52,7 @@ class DetailsViewController: UIViewController, APIControllerProtocol {
     }
 
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
         var cell = tableView.dequeueReusableCellWithIdentifier("TrackCell") as TrackCell
         
         var track = tracks[indexPath.row]
