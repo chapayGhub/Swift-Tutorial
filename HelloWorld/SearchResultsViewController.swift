@@ -84,7 +84,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
                         
                         // Store the image in to our cache
                         self.imageCache[urlString] = image
-                        cell.imageView.image = image
+                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                            cellToUpdate.imageView.image = image
+                        }
                     }
                     else {
                         println("Error: \(error.localizedDescription)")
@@ -94,7 +96,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             }
             else {
                 dispatch_async(dispatch_get_main_queue(), {
-                    cell.imageView.image = image
+                    if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                        cellToUpdate.imageView.image = image
+                    }
                 })
             }
         })
