@@ -59,49 +59,46 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         
         // Get the formatted price string for display in the subtitle
         let formattedPrice: NSString = rowData["formattedPrice"] as NSString
+    
+        // Jump in to a background thread to get the image for this item
         
-        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            // Jump in to a background thread to get the image for this item
-            
-            // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
-            let urlString = rowData["artworkUrl60"] as String
-            
-            // Check our image cache for the existing key. This is just a dictionary of UIImages
-            //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
-            var image = self.imageCache[urlString]
+        // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
+        let urlString = rowData["artworkUrl60"] as String
+        
+        // Check our image cache for the existing key. This is just a dictionary of UIImages
+        //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
+        var image = self.imageCache[urlString]
 
+        
+        if( !image? ) {
+            // If the image does not exist, we need to download it
+            var imgURL: NSURL = NSURL(string: urlString)
             
-            if( !image? ) {
-                // If the image does not exist, we need to download it
-                var imgURL: NSURL = NSURL(string: urlString)
-                
-                // Download an NSData representation of the image at the URL
-                let request: NSURLRequest = NSURLRequest(URL: imgURL)
-                let urlConnection: NSURLConnection = NSURLConnection(request: request, delegate: self)
-                NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-                    if !error? {
-                        image = UIImage(data: data)
-                        
-                        // Store the image in to our cache
-                        self.imageCache[urlString] = image
-                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
-                            cellToUpdate.imageView.image = image
-                        }
-                    }
-                    else {
-                        println("Error: \(error.localizedDescription)")
-                    }
-                })
-                
-            }
-            else {
-                dispatch_async(dispatch_get_main_queue(), {
+            // Download an NSData representation of the image at the URL
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if !error? {
+                    image = UIImage(data: data)
+                    
+                    // Store the image in to our cache
+                    self.imageCache[urlString] = image
                     if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
                         cellToUpdate.imageView.image = image
                     }
-                })
-            }
-        })
+                }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
+            
+        }
+        else {
+            dispatch_async(dispatch_get_main_queue(), {
+                if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                    cellToUpdate.imageView.image = image
+                }
+            })
+        }
         
         cell.detailTextLabel.text = formattedPrice
         
