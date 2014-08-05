@@ -68,7 +68,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             //var image: UIImage? = self.imageCache.valueForKey(urlString) as? UIImage
             var image = self.imageCache[urlString]
             
-            if( !image? ) {
+            if( image == nil ) {
                 // If the image does not exist, we need to download it
                 var imgURL: NSURL = NSURL(string: urlString)
                 
@@ -76,7 +76,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
                 let request: NSURLRequest = NSURLRequest(URL: imgURL)
                 let urlConnection: NSURLConnection = NSURLConnection(request: request, delegate: self)
                 NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-                    if !error? {
+                    if error == nil {
                         image = UIImage(data: data)
                         
                         // Store the image in to our cache

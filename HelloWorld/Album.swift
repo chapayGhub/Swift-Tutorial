@@ -39,19 +39,19 @@ class Album {
             for result in allResults {
                 
                 var name = result["trackName"] as? String
-                if !name? {
+                if name == nil {
                     name = result["collectionName"] as? String
                 }
                 
                 // Sometimes price comes in as formattedPrice, sometimes as collectionPrice.. and sometimes it's a float instead of a string. Hooray!
                 var price = result["formattedPrice"] as? String
-                if !price? {
+                if price == nil {
                     price = result["collectionPrice"] as? String
-                    if !price? {
+                    if price == nil {
                         var priceFloat: Float? = result["collectionPrice"] as? Float
                         var nf: NSNumberFormatter = NSNumberFormatter()
                         nf.maximumFractionDigits = 2;
-                        if priceFloat? {
+                        if priceFloat != nil {
                             price = "$"+nf.stringFromNumber(priceFloat)
                         }
                     }
@@ -62,7 +62,7 @@ class Album {
                 let artistURL = result["artistViewUrl"] as? String
                 
                 var itemURL = result["collectionViewUrl"] as? String
-                if !itemURL? {
+                if itemURL == nil {
                     itemURL = result["trackViewUrl"] as? String
                 }
                 

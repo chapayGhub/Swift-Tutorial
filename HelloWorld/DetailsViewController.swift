@@ -20,7 +20,7 @@ class DetailsViewController: UIViewController, APIControllerProtocol {
     var tracks = [Track]()
     lazy var api : APIController = APIController(delegate: self)
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
@@ -30,7 +30,7 @@ class DetailsViewController: UIViewController, APIControllerProtocol {
         albumCover.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.album?.largeImageURL)))
         
         // Load in tracks
-        if self.album? {
+        if self.album != nil {
             api.lookupAlbum(self.album!.collectionId)
         }
     }

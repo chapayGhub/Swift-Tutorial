@@ -33,14 +33,14 @@ class Track {
                         var trackTitle = trackInfo["trackName"] as? String
                         var trackPreviewUrl = trackInfo["previewUrl"] as? String
                         
-                        if(!trackTitle) {
+                        if(trackTitle == nil) {
                             trackTitle = "Unknown"
                         }
-                        else if(!trackPrice) {
+                        else if(trackPrice == nil) {
                             println("No trackPrice in \(trackInfo)")
                             trackPrice = "?"
                         }
-                        else if(!trackPreviewUrl) {
+                        else if(trackPreviewUrl == nil) {
                             trackPreviewUrl = ""
                         }
                         
