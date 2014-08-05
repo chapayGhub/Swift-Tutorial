@@ -13,7 +13,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var albumCover: UIImageView!
     var album: Album?
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
