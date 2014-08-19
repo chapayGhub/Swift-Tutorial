@@ -11,7 +11,6 @@
 		024F8ABB198464AA00E9DEB8 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ABA198464AA00E9DEB8 /* SearchResultsViewController.swift */; };
 		024F8ABE198464AA00E9DEB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024F8ABC198464AA00E9DEB8 /* Main.storyboard */; };
 		024F8AC0198464AA00E9DEB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024F8ABF198464AA00E9DEB8 /* Images.xcassets */; };
-		024F8ACC198464AA00E9DEB8 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ACB198464AA00E9DEB8 /* HelloWorldTests.swift */; };
 		024F8AD619846FC100E9DEB8 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8AD519846FC100E9DEB8 /* APIController.swift */; };
 		024F8AD8198482D000E9DEB8 /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = 024F8AD7198482D000E9DEB8 /* Blank52.png */; };
 		024F8ADA19848E1E00E9DEB8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8AD919848E1E00E9DEB8 /* Album.swift */; };
@@ -20,24 +19,13 @@
 		024F8AE0198532B800E9DEB8 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F8ADF198532B800E9DEB8 /* TrackCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		024F8AC6198464AA00E9DEB8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 024F8AAB198464AA00E9DEB8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 024F8AB2198464AA00E9DEB8;
-			remoteInfo = HelloWorld;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		024F8AB3198464AA00E9DEB8 /* MusicSearchTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicSearchTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		024F8AB3198464AA00E9DEB8 /* AppstoreViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppstoreViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024F8AB7198464AA00E9DEB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F8AB8198464AA00E9DEB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		024F8ABA198464AA00E9DEB8 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		024F8ABD198464AA00E9DEB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		024F8ABF198464AA00E9DEB8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		024F8AC5198464AA00E9DEB8 /* MusicSearchTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicSearchTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024F8ACA198464AA00E9DEB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F8ACB198464AA00E9DEB8 /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
 		024F8AD519846FC100E9DEB8 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
@@ -50,13 +38,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		024F8AB0198464AA00E9DEB8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		024F8AC2198464AA00E9DEB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,8 +59,7 @@
 		024F8AB4198464AA00E9DEB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				024F8AB3198464AA00E9DEB8 /* MusicSearchTutorial.app */,
-				024F8AC5198464AA00E9DEB8 /* MusicSearchTutorialTests.xctest */,
+				024F8AB3198464AA00E9DEB8 /* AppstoreViewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,26 +126,8 @@
 			);
 			name = MusicSearchTutorial;
 			productName = HelloWorld;
-			productReference = 024F8AB3198464AA00E9DEB8 /* MusicSearchTutorial.app */;
+			productReference = 024F8AB3198464AA00E9DEB8 /* AppstoreViewer.app */;
 			productType = "com.apple.product-type.application";
-		};
-		024F8AC4198464AA00E9DEB8 /* MusicSearchTutorialTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 024F8AD2198464AA00E9DEB8 /* Build configuration list for PBXNativeTarget "MusicSearchTutorialTests" */;
-			buildPhases = (
-				024F8AC1198464AA00E9DEB8 /* Sources */,
-				024F8AC2198464AA00E9DEB8 /* Frameworks */,
-				024F8AC3198464AA00E9DEB8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				024F8AC7198464AA00E9DEB8 /* PBXTargetDependency */,
-			);
-			name = MusicSearchTutorialTests;
-			productName = HelloWorldTests;
-			productReference = 024F8AC5198464AA00E9DEB8 /* MusicSearchTutorialTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -178,10 +140,7 @@
 				TargetAttributes = {
 					024F8AB2198464AA00E9DEB8 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					024F8AC4198464AA00E9DEB8 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 024F8AB2198464AA00E9DEB8;
+						DevelopmentTeam = CEX56RDAVJ;
 					};
 				};
 			};
@@ -199,7 +158,6 @@
 			projectRoot = "";
 			targets = (
 				024F8AB2198464AA00E9DEB8 /* MusicSearchTutorial */,
-				024F8AC4198464AA00E9DEB8 /* MusicSearchTutorialTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,13 +170,6 @@
 				024F8AD8198482D000E9DEB8 /* Blank52.png in Resources */,
 				024F8ABE198464AA00E9DEB8 /* Main.storyboard in Resources */,
 				024F8AC0198464AA00E9DEB8 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		024F8AC3198464AA00E9DEB8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,23 +190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		024F8AC1198464AA00E9DEB8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				024F8ACC198464AA00E9DEB8 /* HelloWorldTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		024F8AC7198464AA00E9DEB8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 024F8AB2198464AA00E9DEB8 /* MusicSearchTutorial */;
-			targetProxy = 024F8AC6198464AA00E9DEB8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		024F8ABC198464AA00E9DEB8 /* Main.storyboard */ = {
@@ -351,9 +286,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = MusicSearchTutorial;
+				PRODUCT_NAME = AppstoreViewer;
+				PROVISIONING_PROFILE = "34591023-0A0C-4A0C-9E07-45AF2E99B404";
 			};
 			name = Debug;
 		};
@@ -362,43 +299,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = MusicSearchTutorial;
-			};
-			name = Release;
-		};
-		024F8AD3198464AA00E9DEB8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloWorld.app/HelloWorld";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HelloWorldTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = MusicSearchTutorialTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		024F8AD4198464AA00E9DEB8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloWorld.app/HelloWorld";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HelloWorldTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = MusicSearchTutorialTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PRODUCT_NAME = AppstoreViewer;
+				PROVISIONING_PROFILE = "34591023-0A0C-4A0C-9E07-45AF2E99B404";
 			};
 			name = Release;
 		};
@@ -419,15 +324,6 @@
 			buildConfigurations = (
 				024F8AD0198464AA00E9DEB8 /* Debug */,
 				024F8AD1198464AA00E9DEB8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		024F8AD2198464AA00E9DEB8 /* Build configuration list for PBXNativeTarget "MusicSearchTutorialTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				024F8AD3198464AA00E9DEB8 /* Debug */,
-				024F8AD4198464AA00E9DEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

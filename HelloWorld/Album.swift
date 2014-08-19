@@ -35,8 +35,11 @@ class Album {
         // Store the results in our table data array
         if allResults.count>0 {
             
+            var i=0
             // Sometimes iTunes returns a collection, not a track, so we check both for the 'name'
             for result in allResults {
+                
+                NSLog("%d. %@", i++, result as NSDictionary)
                 
                 var name = result["trackName"] as? String
                 if name == nil {
@@ -59,11 +62,15 @@ class Album {
                 
                 let thumbnailURL = result["artworkUrl60"] as? String
                 let imageURL = result["artworkUrl100"] as? String
-                let artistURL = result["artistViewUrl"] as? String
                 
                 var itemURL = result["collectionViewUrl"] as? String
                 if itemURL == nil {
                     itemURL = result["trackViewUrl"] as? String
+                }
+                
+                var artistURL = result["artistViewUrl"] as? String
+                if artistURL == nil {
+                    artistURL = itemURL
                 }
                 
                 var collectionId = result["collectionId"] as? Int
